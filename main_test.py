@@ -17,7 +17,10 @@ def test_main_1():
     lines = captureOut.getvalue().split('\n')
     print(lines)
 
-    ret = main.main()
+    mylist = [5, 10, 15, 20, 21, 25, 27]
+    ret = main.setOddNumber(mylist)
+    print(f'Your return value is {ret}')
+
     assert len(ret) == 7
     assert ret[0] == 1
     assert ret[1] == 0
@@ -35,3 +38,11 @@ def test_main_1():
     # res = re.search(regex_string, main.evenlist)
     # assert res != None
     # print(res.group())
+
+
+def test_main_2():
+    mylist = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    ret = main.setOddNumber(mylist)
+    print(f'Your return value is {ret}')
+    assert len(ret) == 10
+    assert ret == [1, 0, 1, 0, 1, 0, 1, 0, 1, 0]
